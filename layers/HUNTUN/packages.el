@@ -99,6 +99,7 @@ Each entry is either:
   )
 
   (spacemacs/set-leader-keys "d" 'pyim-convert-code-at-point) 
+  (define-key evil-insert-state-map (kbd "C-d") 'pyim-convert-code-at-point)
 )
 ;;; packages.el ends
 ;;; here
