@@ -4,5 +4,5 @@
 
 (setq OneDrive-path (getenv "OneDrive"))
 (setq OneDrive-Org-Path (concat OneDrive-path "\\org"))
-(setq org-agenda-files (list OneDrive-Org-Path))
-(setq org-default-notes-file (concat OneDrive-Org-Path "\\Todo.org"))
+(setq org-agenda-files (directory-files-recursively OneDrive-Org-Path "\.org$"))
+(setq org-default-notes-file (concat OneDrive-Org-Path "\\Todo\\Todo.org"))
