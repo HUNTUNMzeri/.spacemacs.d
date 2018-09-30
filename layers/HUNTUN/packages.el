@@ -32,7 +32,8 @@
 (defconst HUNTUN-packages
   '(pyim
     pyim-basedict
-    posframe)
+    posframe
+    cnfonts)
 
       
 
@@ -101,5 +102,12 @@ Each entry is either:
   (spacemacs/set-leader-keys "d" 'pyim-convert-code-at-point) 
   (define-key evil-insert-state-map (kbd "C-d") 'pyim-convert-code-at-point)
 )
+
+(defun HUNTUN/init-cnfonts ()
+  (use-package cnfonts
+    :ensure nil
+    :config
+    (cnfonts-enable)
+    (cnfonts-set-spacemacs-fallback-fonts)))
 ;;; packages.el ends
 ;;; here
